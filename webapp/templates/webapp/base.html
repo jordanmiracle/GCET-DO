@@ -1,0 +1,176 @@
+{% load static %}
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Jumping Protein</title>
+    <meta name="title" content="Jumping Protein">
+    <meta name="description"
+          content="Jumping protein is a division of the Glorified Community Empowerment Trust. We have a vision of an economically limitless Africa. ">
+    <meta name="keywords"
+          content="Sustainability, farming, protein, hunger, climate, poverty, economy, business, education, empowerment, Basic needs, Development">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="author" content="Esnath Divasoni">
+    <link rel="manifest" href="{% static 'jumpingprotein/manifest.webmanifest' %}">
+    <link href="http://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static "webapp/css/normalize.css" %}">
+    <link rel="stylesheet" href="{% static "webapp/css/style.css" %}">
+    <link href="{% static "webapp/css/fonts.css" %}" rel="stylesheet" type="text/css" media="all"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv=X-UA-Compatible content=" IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <script type="text/javascript">
+        var bodyCacheable = true;
+
+        var exclusionReason =
+            {"shouldRender": true, "forced": false};
+        var ssrInfo = {"renderBodyTime": 327}
+
+    </script>
+
+    <!--[if IE 6]>
+    <link href="default_ie6.css" rel="stylesheet" type="text/css"/><![endif]-->
+</head>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .main {
+        max-height: 550px;;
+        background-color: #292c2f;
+        color: white;
+        font-size: 38pt;
+        text-align: center;
+        line-height: 550px;
+    }
+</style>
+
+<div id="header-wrapper">
+    <div id="topheader" class="container">
+        <div id="logo">
+        </div>
+        <div class="navbar">
+            <div class="inner_navbar">
+                <div class="logo">
+                    <a href="#"><span>GCET</span></a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="{% url 'index' %}" class="active">Home</a></li>
+                        <li><a href="{% url 'about' %}">About Us</a></li>
+                        <li><a href="{% url 'blog:post_list' %}">Blog</a></li>
+                        <li><a href="#">Gallery</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+    <div id="banner" class="container">
+        <div class="title">
+            <h2>Jumping Protein</h2>
+            <span class="byline">A division of the Glorified Community Empowerment Trust</span>
+        </div>
+    </div>
+
+</div>
+
+{% block content %}{% endblock content %}
+
+
+<footer class="footer-distributed">
+
+    <div class="footer-left">
+
+        <h3>Glorified Community Empowerment<span>Trust</span></h3>
+
+        <p class="footer-links">
+            <a href="{% url 'index' %}">Home</a>
+            ·
+            <a href="{% url 'about' %}">Blog</a>
+            ·
+            <a href="{% url 'blog:post_list' %}">Pricing</a>
+            ·
+            <a href="{% url 'gallery' %}">About</a>
+
+        </p>
+
+        <p class="footer-company-name">Jumping Protein &copy; 2021</p>
+    </div>
+
+    <div class="footer-center">
+
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>126 Sturgess Cranborne</span>Harare, Zimbabwe</p>
+        </div>
+
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>+263 772 485 521</p>
+            <p>+263 774 741 688</p>
+        </div>
+
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:gcet.victors@gmail.com">gcet.victors@gmail.com</a></p>
+        </div>
+
+    </div>
+
+    <div class="footer-right">
+
+        <p class="footer-company-about">
+            <span>Our Partners</span>
+            The Resolution Project as the primary source of funding. As well as contribution from Sight and Life
+            -
+            Partners in nutrition. As well as the help of personal friends.
+        </p>
+
+        <div class="footer-icons">
+
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<!-- jQuery Easing -->
+<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+<!-- Bootstrap -->
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<!-- Waypoints -->
+<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'js/sticky.js' %}"></script>
+
+<!-- Stellar -->
+<script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+<!-- Superfish -->
+<script src="{% static 'js/hoverIntent.js' %}"></script>
+<script src="{% static 'js/superfish.js' %}"></script>
+
+<!-- Main JS -->
+<script src="{% static 'js/main.js' %}"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
