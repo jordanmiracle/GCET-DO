@@ -14,7 +14,6 @@ from pathlib import Path
 import os
 import json
 from django.core.exceptions import ImproperlyConfigured
-import django_heroku
 import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -45,7 +44,7 @@ def get_secret(setting, secrets=secrets):
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'https://jumping-protein.herokuapp.com/', 'www.gcet.co.zw']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'https://secret-brushlands-87469.herokuapp.com/', 'www.gcet.co.zw', '165.22.191.189', 'gcet.co.zw']
 
 # Application definition
 
@@ -99,17 +98,26 @@ WSGI_APPLICATION = 'jumpingprotein.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
+#if DEBUG:
+#    DATABASES = {
+#        'default': {
+#            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#            'USER': 'jordanmiracle',
+#            'NAME': 'jpblogdb',
+#            'HOST': 'localhost',
+#            'PASSWORD': get_secret('DB_PASSWORD'),
+#            'PORT': '5432',
+#       },
+#    }
+
+
 if DEBUG:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'USER': 'jordanmiracle',
-            'NAME': 'jpblogdb',
-            'HOST': 'localhost',
-            'PASSWORD': get_secret('DB_PASSWORD'),
-            'PORT': '5432',
-        },
+	DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
+ }
 
 FIXTURE_DIRS = [
     os.path.join(BASE_DIR, "fixtures")
@@ -168,6 +176,6 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 ## Heroku
 # heroku database settings
-if not DEBUG:
-    django_heroku.settings(locals(), staticfiles=False)
-    DATABASES = {'default': dj_database_url.config(conn_max_age=600, ssl_require=True)}
+#if not DEBUG:
+#    django_heroku.settings(locals(), staticfiles=False)
+#    DATABASES = {'default': dj_database_url.config(conn_max_age=600, #ssl_require=True)}
